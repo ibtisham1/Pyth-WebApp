@@ -1,0 +1,36 @@
+{
+  "_comment": "This is the sample JSON file. You must use this format for your JSON files as we will be using similar formats when marking your assignment. Anything starting with an underscore (like this _comment) should be ignored.",
+  "stickmanSize": "normal",
+  "_stickmanSizeComment": "Your main character can be tiny, normal, large, or giant. What pixel dimensions these match can be up to you.",
+  "stickmanPos": {
+    "x": 20.0
+  },
+  "levelHeight": 400.0,
+  "levelWidth": 1200.0,
+  "floorHeight": 300.0,
+  "_stickmanPosComment": "Stickman should start at the x position indicated, with their y position being on your 'floor'. This must be a positive double.",
+  "cloudVelocity": 3.2,
+  "_cloudVelocityComment": "Clouds should move the given number of pixels per second. This must be a positive double.",
+
+  "enemies": {
+    "enemy_1":{
+      "image": "slimeBa.png",
+      "x": 800.0,
+      "y": 350.0,
+      "strategy": "move"
+    },
+    "enemy_2":{
+      "image": "slimeGa.png",
+      "x": 300.0,
+      "y": 350.0,
+      "strategy": "none"
+    }
+  },
+  "platforms": {
+    "platform_1": {
+      "image": "foot_tile.png",
+      "x": 800.0,
+      "y": 300.0
+    }
+  }
+}
