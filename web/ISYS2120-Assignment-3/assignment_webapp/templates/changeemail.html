@@ -1,0 +1,24 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container details">
+
+        <h2 class="title"> Change Email </h2>
+
+        <form class="Add" method="POST" action="{{url_for('changeEmail',username = user.username)}}">
+
+            New Email: <input type="text" name="email" value="email" placeholder="randomname@gamil.com">
+            <br/>
+            <button class="flat" type="submit"> SUBMIT </button>
+
+            <hr/>
+
+        </form>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+
+     </div>
+     </div>
+     {% include 'bottom.html'%}

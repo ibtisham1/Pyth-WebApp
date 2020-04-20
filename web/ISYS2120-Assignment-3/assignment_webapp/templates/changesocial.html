@@ -1,0 +1,24 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container details">
+
+        <h2 class="title"> Change Social </h2>
+
+        <form class="Add" method="POST" action="{{url_for('changeSocial',username = user.username)}}">
+
+            New Social: <input type="text" name="social" value="social" placeholder="social information">
+            <br/>
+            <button class="flat" type="submit"> SUBMIT </button>
+
+            <hr/>
+
+        </form>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+
+     </div>
+     </div>
+     {% include 'bottom.html'%}

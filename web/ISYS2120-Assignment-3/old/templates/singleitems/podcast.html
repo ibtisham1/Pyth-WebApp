@@ -1,0 +1,58 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container details">
+        <!-- TODO Query 6  
+        Display All Relevant Podcast Infromation including meta data
+	if( podcast | length >0%)
+		<h2 class="title"> {{podcast[0].podcast_title}}</h2>
+		<hr/>
+		<h3> ID </h3>
+	    {% for instance in podcast%}
+                
+                    {{instance.podcast_id}}
+                    <br/>© Spotify Public Domain 2019.
+            {% endfor %}
+            <br/>
+            <h3> Title</h3>l
+            {% for instance in podcast %}       
+                    <div>
+                        {{instance.title}}
+                    </div>
+            {% endfor %}
+            <br/>
+            <h4> URL</h4>
+            {% for instance in podcast%}
+                    {{instance.uri}}
+            {% endfor %}
+	    <br/>
+            <h5> Last_Updated</h5>
+            {% for instance in podcast %}       
+                    <div>
+                        {{instance.podcast_last_updated}}
+                    </div>
+            {% endfor %}
+            <div>
+        Display All Relevant Podcast Episodes for this Podcast
+        -->
+                <!-- Podcast Episodes -->
+                <h3>Episodes for this Podcast</h3>
+                <table class="styled">
+                    <thead>
+                        <tr>
+                            <td>Podcast Episode Media ID</td>
+                            <td>Podcast Episode Title</td>
+                            <td>Podcast Episode URI</td>
+                            <td>Podcast Episode Published Date</td>
+                            <td>Podcast Episode Length</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add a for loop to iterate over the episodes -->
+                    </tbody>
+        
+                </table>
+        
+            </div>
+    </div>
+</div>
+{% include 'bottom.html'%}

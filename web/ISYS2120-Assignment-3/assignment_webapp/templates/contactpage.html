@@ -1,0 +1,54 @@
+{% include 'top.html' %}
+<div class="content">
+    <div class="container details">
+        <!-- Check if We have a valid contact detail -->
+        {% if contact | length > 0 %}
+            <h2 class="title"> {{contact[0].username}}</h2>
+            <hr/>
+            <h3> Email </h3>
+            {% for instance in contact %}
+                {% if instance.contact_type_name == 'email' %}
+                    <div>
+                        {{instance.contact_type_value}}
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <br/>
+            <h3> Phone </h3>
+            {% for instance in contact %}
+                {% if instance.contact_type_name == 'phone' %}
+                    <div>
+                        {{instance.contact_type_value}}
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <br/>
+            <h3> Social </h3>
+            {% for instance in contact %}
+                {% if instance.contact_type_name == 'social' %}
+                    <div>
+                        {{instance.contact_type_value}}
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <br/>
+            <div>
+            <br/>
+            <a href="{{url_for('change_password',username = contact[0].username)}}" class="button">Change Password</a>
+            <br/>
+            <a href="{{url_for('changeEmail',username = contact[0].username)}}" class="button">Change Email</a>
+            <br/>
+            <a href="{{url_for('changePhoneNo',username = contact[0].username)}}" class="button">Change PhoneNumber</a>
+            <br/>
+            <a href="{{url_for('changeSocial',username = contact[0].username)}}" class="button">Change Social Information</a>
+            <br/>
+        {% else %}
+            <h2 class="title"> Invalid User Details </h2>
+        {% endif %}
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+{% include 'bottom.html'%}
